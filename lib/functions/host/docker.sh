@@ -385,7 +385,8 @@ function docker_cli_launch() {
 
 	# Show and help user understand space usage in Docker volumes.
 	# This is done in a loop; `docker df` fails sometimes (for no good reason).
-	docker_cli_show_armbian_volumes_disk_usage
+	# @TODO: this is very, very slow when the volumes are full. disable.
+	# docker_cli_show_armbian_volumes_disk_usage
 
 	return ${docker_build_result}
 }
